@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&family=Poppins&family=Questrial&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  background-color: rgba(167, 167, 167, 0.55);
+  width: 900px;
+  height: 600px;
+  overflow: scroll;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 350px;
+    height: 450px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin-left: 25px;
+    padding: 2% 5%;
+  }
+
+  .top {
+    display: flex;
+    width: 350px;
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    h3 {
+      font-family: 'Poppins';
+      font-weight: bold;
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    padding: 2% 5%;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  h3 {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 3rem;
+  }
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  padding: 2% 2%;
+}
+
+.dummyHover:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.629);
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  gap: 15px;
+}
+
+.click {
+  font-family: Questrial;
+  animation: opacity 1s infinite;
+  font-family: 1.2rem;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 100%;
+  }
+  15% {
+    opacity: 75%;
+  }
+  25% {
+    opacity: 50%;
+  }
+  50% {
+    opacoty: 0;
+  }
+  60% {
+    opacity: 25%;
+  }
+  75% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

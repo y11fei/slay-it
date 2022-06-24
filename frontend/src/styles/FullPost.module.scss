@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&family=Poppins&family=Questrial&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  background-color: rgba(167, 167, 167, 0.55);
+  border-radius: 3px;
+  width: 825px;
+  height: auto;
+  max-height: fit-content;
+  padding: 2% 3%;
+}
+
+.hashtag {
+  border: 1px solid white;
+  background-color: rgba(90, 90, 90, 0.75);
+  color: white;
+  border-radius: 15px;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 10px;
+  margin-bottom: 1%;
+
+  p {
+    align-self: center;
+    margin-bottom: 1%;
+  }
+}
+
+.hashtag:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: gray;
+  cursor: pointer;
+}
+
+.paragraph {
+  font-family: Helvetica, sans-serif;
+}
+
+.thoughts {
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  margin-top: 2%;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.likes:hover {
+  color: white;
+}
+
+.favorite:active {
+  color: red;
+  transform: scale(1.25);
+}
+
+.dislikes:hover {
+  color: white;
+}
+
+.bad:active {
+  color: red;
+  transform: scale(1.25);
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 360px;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+  width: fit-content;
+  margin-bottom: 2%;
+}
+
+.commentContent {
+  border: 1px solid white;
+  background-color: rgba(84, 84, 84, 0.75);
+  padding: 2px 5px;
+  text-indent: 5px;
+  color: white;
+  width: 830px;
+  font-family: Questrial;
+}
+
+@media (max-width: 600px) {
+  .commentContent {
+    max-width: 360px;
+    height: 4rem;
+  }
+  .view {
+    max-width: 360px;
+  }
+}
+
+.commentBtn {
+  border-radius: 10px;
+  height: 2.5rem;
+  padding: 0 2%;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border: 2px solid rgb(95, 95, 95);
+}
+
+.commentBtn:hover {
+  border: 3px solid white;
+  background-color: rgb(95, 95, 95);
+  color: white;
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  width: 825px;
+  background-color: rgba(131, 131, 131, 0.251);
+  padding: 1% 2%;
+  border: 2px solid white;
+  height: auto;
+  margin-bottom: 1%;
+  margin-top: 5px;
+}
+
+.commenter {
+  font-family: Poppins;
+  color: black;
+  font-style: italic;
+}
+
+.commentText {
+  color: black;
+  font-family: Poppins, sans-serif;
+}
+
+.line {
+  border: 1px solid black;
+  fill: black;
+  margin-top: -1.5px;
+}
+
+.commenterUser {
+  cursor: pointer;
+}

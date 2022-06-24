@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&family=Poppins&family=Questrial&display=swap');
+
+.create {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  margin-top: 5%;
+  gap: 5px;
+  h2 {
+    font-family: Poppins, sans-serif;
+    color: white;
+    font-weight: bold;
+  }
+
+  textarea {
+    background-color: rgba(84, 84, 84, 0.75);
+    border: 1px solid white;
+    font-family: 'Questrial', sans-serif;
+    text-indent: 5px;
+    color: white;
+    font-size: 20px;
+    overflow: scroll;
+  }
+  hr {
+    border: 1px solid white;
+    fill: white;
+    margin-top: -8px;
+  }
+}
+
+@media (min-width: 600px) {
+  .main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.hashtag {
+  background-color: rgb(84, 84, 84);
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 3px;
+  padding: 5px 5px;
+  margin-top: -1%;
+}
+
+.title {
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .main {
+    margin: 0 2%;
+  }
+}

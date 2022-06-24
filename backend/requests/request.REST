@@ -1,0 +1,4 @@
+GET http://localhost:3030/api/posts
+
+###
+DELETE http://localhost:3030/api/posts/62b5263009efbf19db777296

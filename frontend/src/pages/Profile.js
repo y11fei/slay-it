@@ -53,7 +53,11 @@ const UserProfile = () => {
 
   return (
     <div>
-      <Navigation />
+      <Navigation
+        handleSearch={() => {
+          return null;
+        }}
+      />
       <div className={style.box}>
         <div className={style.container}>
           <div

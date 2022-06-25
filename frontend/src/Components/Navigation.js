@@ -5,8 +5,9 @@ import style from '../styles/Navigation.module.scss';
 import postService from '../services/post';
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
-const Navigation = () => {
+const Navigation = ({ handleSearch }) => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [user, setUser] = useState('');
   let navigate = useNavigate();
@@ -38,7 +39,7 @@ const Navigation = () => {
         >
           slayIt <LoyaltyIcon fontSize="large" />
         </h2>
-
+        <SearchBar onChange={handleSearch} />
         <div className={style.account}>
           {loggedIn ? (
             <Profile handleLogOut={handleLogOut} user={user} />
@@ -93,18 +94,18 @@ const Profile = ({ handleLogOut, user }) => {
   );
 };
 
-// const SearchBar = styled.input`
-//   width: 500px;
-//   border-radius: 15px;
-//   border: 1.5px solid white;
-//   background-color: rgba(188, 178, 178, 0.25);
-//   padding: 10px 15px;
-//   font-family: Verdana, sans-serif;
-//   @media (max-width: 600px) {
-//     width: 150px;
-//     height: 40px;
-//   }
-//   :hover {
-//     border: 3px solid gray;
-//   }
-// `;
+const SearchBar = styled.input`
+  width: 500px;
+  border-radius: 15px;
+  border: 1.5px solid white;
+  background-color: rgba(188, 178, 178, 0.25);
+  padding: 10px 15px;
+  font-family: Verdana, sans-serif;
+  @media (max-width: 600px) {
+    width: 150px;
+    height: 40px;
+  }
+  :hover {
+    border: 3px solid gray;
+  }
+`;

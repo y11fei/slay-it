@@ -53,20 +53,24 @@ const Login = () => {
 
   const handleCreate = (event) => {
     event.preventDefault();
-    const user = { username: newUser, password: newPassword };
-    try {
-      userService.createNew(user);
-      setMessage('Welcome! You can login now :)!');
-      setTimeout(() => {
-        setMessage(null);
-      }, 2000);
-      setNewUser('');
-      setNewPassword('');
-    } catch (exception) {
-      setTimeout(() => {
-        setMessage('Sorry, try one more time!');
-        setMessage(null);
-      }, 2000);
+    if (newUser === '' || newPassword === '') {
+      console.log('empty');
+    } else {
+      const user = { username: newUser, password: newPassword };
+      try {
+        userService.createNew(user);
+        setMessage('Welcome! You can login now :)!');
+        setTimeout(() => {
+          setMessage(null);
+        }, 2000);
+        setNewUser('');
+        setNewPassword('');
+      } catch (exception) {
+        setTimeout(() => {
+          setMessage('Sorry, try one more time!');
+          setMessage(null);
+        }, 2000);
+      }
     }
   };
 
@@ -90,7 +94,11 @@ const Login = () => {
   };
   return (
     <div>
-      <Navigation />
+      <Navigation
+        handleSearch={() => {
+          return null;
+        }}
+      />
       <Notification message={message} display={display} />
       <div className={style.main}>
         <h1>Create Account or Login! </h1>

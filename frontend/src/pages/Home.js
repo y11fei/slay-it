@@ -11,6 +11,8 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
   const [displayPost, setDisplayPost] = useState({});
   const navigate = useNavigate();
+  const [search, setSearch] = useState('');
+  const [allNames, setShowAll] = useState(true);
 
   useEffect(() => {
     const loggedUserJSON = window.localStorage.getItem('loggedUser');
@@ -55,13 +57,24 @@ const Home = () => {
     navigate(`/users/${username}`);
   };
 
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+    setShowAll(!allNames);
+  };
+
+  const useFiltered = allNames
+    ? posts
+    : posts.filter(
+        (post) => post.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
+      );
+
   return (
     <>
       <div className="main">
-        <Navigation />
+        <Navigation handleSearch={handleSearch} />
         <div className="posts">
           <Create displayPost={displayPost} />
-          {posts.map((post, id) => (
+          {useFiltered.map((post, id) => (
             <Post
               key={id}
               post={post}

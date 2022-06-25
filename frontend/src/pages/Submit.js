@@ -27,7 +27,11 @@ const Submit = () => {
   };
   return (
     <div>
-      <Navigation />
+      <Navigation
+        handleSearch={() => {
+          return null;
+        }}
+      />
       <div className={style.main}>
         <div className={style.create}>
           <div className="top">

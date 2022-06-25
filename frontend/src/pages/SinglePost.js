@@ -54,7 +54,11 @@ const PostPage = () => {
 
   return (
     <div>
-      <Navigation />
+      <Navigation
+        handleSearch={() => {
+          return null;
+        }}
+      />
       <div className={style.main}>
         <Dummy
           post={post}
